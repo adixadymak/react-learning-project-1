@@ -1,5 +1,5 @@
 import reactImg from "./assets/react-core-concepts.png";
-import componentsImg from "./assets/components.png";
+import { CORE_CONCEPTS } from "./data.js";
 
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 
@@ -31,7 +31,7 @@ function CoreConcept({ image, title, description }) {
     </li>
   );
 }
-
+// But this kind of props syntax is alot of code
 function App() {
   return (
     <div>
@@ -41,13 +41,28 @@ function App() {
           <h2>Core concepts</h2>
           <ul>
             <CoreConcept
-              image={componentsImg}
-              title="Component"
-              description="The basic UI component"
+              image={CORE_CONCEPTS[0].image}
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
             />
+            <CoreConcept
+              image={CORE_CONCEPTS[1].image}
+              title={CORE_CONCEPTS[1].title}
+              description={CORE_CONCEPTS[1].description}
+            />
+            <CoreConcept
+              image={CORE_CONCEPTS[2].image}
+              title={CORE_CONCEPTS[2].title}
+              description={CORE_CONCEPTS[2].description}
+            />
+            <CoreConcept
+              image={CORE_CONCEPTS[3].image}
+              title={CORE_CONCEPTS[3].title}
+              description={CORE_CONCEPTS[3].description}
+            />
+            {/* <CoreConcept />
             <CoreConcept />
-            <CoreConcept />
-            <CoreConcept />
+            <CoreConcept /> */}
           </ul>
         </section>
       </main>
