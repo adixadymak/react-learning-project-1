@@ -1,16 +1,7 @@
 import { CORE_CONCEPTS } from "./data.js";
 import Header from "./components/Header.jsx";
+import CoreConcept from "./components/CoreConcept.jsx";
 
-//You can set the parameters for CoreConcept to 'props' and then extract each props data as 'props.image' etc.
-function CoreConcept({ image, title, description }) {
-  return (
-    <li>
-      <img src={image} alt={title} />
-      <h3> {title} </h3>
-      <p>{description}</p>
-    </li>
-  );
-}
 // But when the props name is the same as the data in the object for instance. Use this shortcut.
 function App() {
   return (
