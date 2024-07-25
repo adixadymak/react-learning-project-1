@@ -5,6 +5,10 @@ import TabButton from "./components/TabButton.jsx";
 
 // But when the props name is the same as the data in the object for instance. Use this shortcut.
 function App() {
+  function handleSelect() {
+    console.log("Hello World! - Function as props");
+  }
+
   return (
     <div>
       <Header />
@@ -25,11 +29,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={handleSelect}>Components</TabButton>
+            <TabButton onSelect={handleSelect}>JSX</TabButton>
+            <TabButton onSelect={handleSelect}>Props</TabButton>
+            <TabButton onSelect={handleSelect}>State</TabButton>
           </menu>
+          Dynamic Contents
         </section>
       </main>
     </div>
