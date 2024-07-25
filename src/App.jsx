@@ -3,9 +3,14 @@ import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcept.jsx";
 import TabButton from "./components/TabButton.jsx";
 
+import { useState } from "react";
+
 // But when the props name is the same as the data in the object for instance. Use this shortcut.
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState("Please click a button");
+
   function handleSelect(selectedButton) {
+    setSelectedTopic(selectedButton);
     console.log(selectedButton);
   }
 
@@ -36,7 +41,7 @@ function App() {
             <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
           </menu>
-          Dynamic Contents
+          {selectedTopic}
         </section>
       </main>
     </div>
